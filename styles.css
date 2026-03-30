@@ -243,7 +243,7 @@ section.content h2 {
   margin: 0.5rem 0 0;
 }
 
-/* Rasterized figure exports (from PDF); vector originals linked in captions */
+/* Rasterized figure exports (from PDF) */
 .img-figure {
   display: block;
   width: 100%;
@@ -257,10 +257,6 @@ section.content h2 {
 
 .figure-block .img-figure {
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-}
-
-.caption .pdf-link {
-  white-space: nowrap;
 }
 
 .img-hero {
