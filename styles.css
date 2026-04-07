@@ -35,7 +35,7 @@
 
 :root {
   /* UCSD: gold + navy on white */
-  --ucsd-yellow: #fecb03;
+  --ucsd-yellow: #c59114;
   --ucsd-blue: #172b49;
   --bg: #ffffff;
   --surface: color-mix(in srgb, var(--ucsd-yellow) 12%, #ffffff 88%);
@@ -52,14 +52,13 @@
   --lh-prose: 1.65;
   --lh-tight: 1.35;
   --lh-snug: 1.5;
-  --text-title: clamp(1.75rem, 4vw, 2.35rem);
+  --text-title: clamp(2.275rem, 5.2vw, 3.055rem);
   --text-h2: 1.55rem;
   --text-h3: 1.2rem;
   --text-body: 1.05rem;
   --text-secondary: 0.95rem;
   --text-small: 0.9rem;
   --text-ui: 0.88rem;
-  --text-code: 0.78rem;
 }
 
 *,
@@ -113,6 +112,26 @@ a:hover {
   color: var(--ucsd-yellow);
 }
 
+::-moz-selection {
+  background: var(--ucsd-blue);
+  color: var(--ucsd-yellow);
+}
+
+/* Yellow headings: selection inverts to blue text on yellow */
+.hero h1::selection,
+section.content h2::selection,
+h3.section-subtitle::selection {
+  background: var(--ucsd-yellow);
+  color: var(--ucsd-blue);
+}
+
+.hero h1::-moz-selection,
+section.content h2::-moz-selection,
+h3.section-subtitle::-moz-selection {
+  background: var(--ucsd-yellow);
+  color: var(--ucsd-blue);
+}
+
 .wrap {
   max-width: var(--maxw);
   margin: 0 auto;
@@ -136,10 +155,11 @@ a:hover {
   line-height: 1.25;
   margin: 0 0 1rem;
   letter-spacing: -0.02em;
+  color: var(--ucsd-yellow);
 }
 
 .authors {
-  font-size: var(--text-body);
+  font-size: var(--text-h3);
   line-height: var(--lh-prose);
   margin: 0 0 0.35rem;
 }
@@ -172,7 +192,7 @@ a:hover {
 }
 
 .affil {
-  font-size: var(--text-secondary);
+  font-size: var(--text-h3);
   line-height: var(--lh-snug);
   color: var(--muted);
   margin: 0 0 1rem;
@@ -187,7 +207,7 @@ a:hover {
   margin-top: 1.75rem;
   padding-top: 1.25rem;
   border-top: 1px solid var(--border);
-  font-size: var(--text-small);
+  font-size: var(--text-h3);
   line-height: var(--lh-tight);
 }
 
@@ -220,6 +240,7 @@ section.content h2 {
   line-height: 1.28;
   margin: 0 0 1rem;
   letter-spacing: -0.02em;
+  color: var(--ucsd-yellow);
 }
 
 .section-subtitle {
@@ -229,7 +250,7 @@ section.content h2 {
   line-height: 1.35;
   margin: 2rem 0 0.75rem;
   letter-spacing: -0.02em;
-  color: var(--text);
+  color: var(--ucsd-yellow);
 }
 
 #real-world .section-subtitle:first-of-type {
@@ -391,7 +412,7 @@ section.content h2 {
   width: 100%;
   border-radius: var(--radius);
   overflow: hidden;
-  background: var(--ucsd-blue);
+  background: var(--bg);
   box-shadow: 0 8px 32px var(--shadow);
 }
 
@@ -417,7 +438,7 @@ section.content h2 {
   max-width: 100%;
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  background: var(--surface);
+  background: var(--bg);
   vertical-align: middle;
 }
 
@@ -466,7 +487,7 @@ section.content .bib-header h2 {
   padding: 0.4rem 0.85rem;
   border: 1px solid var(--border);
   border-radius: 999px;
-  background: var(--surface);
+  background: color-mix(in srgb, var(--ucsd-blue) 6%, #ffffff 94%);
   color: var(--text);
   cursor: pointer;
   transition: border-color 0.15s, box-shadow 0.15s;
@@ -484,7 +505,7 @@ section.content .bib-header h2 {
 
 pre.bib {
   font-family: ui-monospace, "SF Mono", Menlo, monospace;
-  font-size: var(--text-code);
+  font-size: var(--text-body);
   line-height: 1.5;
   padding: 1rem 1.1rem;
   background: color-mix(in srgb, var(--ucsd-blue) 6%, #ffffff 94%);
