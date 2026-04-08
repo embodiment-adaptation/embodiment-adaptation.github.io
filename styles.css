@@ -1,13 +1,20 @@
 /* Project page — layout inspired by academic landing pages (e.g. embodiment scaling laws) */
 
 /*
-  Graphik (Commercial Type): self-hosted webfont under fonts/. Add *-Web.woff2 for 500/600/700
-  if you want real weights; with Regular only, heavier font-weight uses browser synthesis.
+  Graphik (Commercial Type): self-hosted *-Web.woff2 under fonts/. Regular + Bold wired; 500/600
+  fall back to the nearest defined weight (browser may synthesize between 400 and 700).
 */
 @font-face {
   font-family: "Graphik";
   src: url("fonts/Graphik-Regular-Web.woff2") format("woff2");
   font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("fonts/Graphik-Bold-Web.woff2") format("woff2");
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -129,7 +136,7 @@ h3.section-subtitle::-moz-selection {
 
 .hero h1 {
   font-family: var(--font-body);
-  font-weight: 600;
+  font-weight: 700;
   font-size: var(--text-title);
   line-height: 1.25;
   margin: 0 0 1rem;
@@ -139,6 +146,7 @@ h3.section-subtitle::-moz-selection {
 
 .authors {
   font-size: var(--text-h3);
+  font-weight: 700;
   line-height: var(--lh-prose);
   margin: 0 0 0.35rem;
 }
@@ -215,7 +223,7 @@ section.content:last-of-type {
 section.content h2 {
   font-family: var(--font-body);
   font-size: var(--text-h2);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.28;
   margin: 0 0 1rem;
   letter-spacing: -0.02em;
@@ -225,7 +233,7 @@ section.content h2 {
 .section-subtitle {
   font-family: var(--font-body);
   font-size: var(--text-h3);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.35;
   margin: 2rem 0 0.75rem;
   letter-spacing: -0.02em;
