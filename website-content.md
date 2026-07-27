@@ -19,11 +19,11 @@ Quadrupedal Locomotion
 
 ### Authors
 
-Dichen Li^1\*,†^, Bo Ai^1\*^, Nico Bohlinger^2^, Jan Peters^2,3^, Henrik I. Christensen^1^, Hao Su^1^
+Dichen Li^1\*^, Bo Ai^1\*^, Nico Bohlinger^2\*^, Jan Peters^2,3^, Henrik I. Christensen^1^, Hao Su^1^
 
-_(Superscripts match the site: affiliation numbers, \* equal contribution, † corresponding author.)_
+_(Superscripts match the site: affiliation numbers, \* equal contribution.)_
 
-(* Equal contribution; † Corresponding author: dil012@ucsd.edu)
+(* Equal contribution)
 
 ### Institution logos
 
