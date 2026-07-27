@@ -82,6 +82,9 @@ video,
 svg {
   max-width: 100%;
   height: auto;
+  border: 0;
+  outline: 0;
+  box-shadow: none;
 }
 
 a {
@@ -185,31 +188,6 @@ h3.section-subtitle::-moz-selection {
   margin: 0 0 1rem;
 }
 
-/* In-page nav */
-.section-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem 0.65rem;
-  justify-content: center;
-  margin-top: 1.75rem;
-  padding-top: 1.25rem;
-  border-top: 1px solid var(--border);
-  font-size: var(--text-h3);
-  line-height: var(--lh-tight);
-}
-
-.section-nav a {
-  color: var(--muted);
-  font-weight: 600;
-  text-decoration: none;
-  padding: 0.2rem 0;
-}
-
-.section-nav a:hover {
-  color: var(--accent);
-  text-decoration: underline;
-}
-
 /* Sections */
 section.content {
   padding: 2.75rem 0;
@@ -228,6 +206,10 @@ section.content h2 {
   margin: 0 0 1rem;
   letter-spacing: -0.02em;
   color: var(--ucsd-yellow);
+}
+
+#overview h2 {
+  text-align: center;
 }
 
 .section-subtitle {
@@ -282,7 +264,8 @@ section.content h2 {
 }
 
 .abstract {
-  margin: 0;
+  width: 60%;
+  margin: 0 auto;
   text-align: start;
   hyphens: auto;
   line-height: var(--lh-prose);
@@ -302,6 +285,22 @@ section.content h2 {
 
 .problem-figure {
   margin-top: 1.5rem;
+}
+
+.problem-figure .img-hero {
+  width: 60%;
+  margin-inline: auto;
+}
+
+.figure-w-80 .img-figure {
+  width: 80%;
+  margin-inline: auto;
+}
+
+.figure-w-60 .img-figure,
+.figure-w-60 .video-wrap {
+  width: 60%;
+  margin-inline: auto;
 }
 
 /* Two simulation figures: same structure as pipeline (figure-block), stacked */
@@ -397,10 +396,11 @@ section.content h2 {
 .video-wrap {
   position: relative;
   width: 100%;
-  border-radius: var(--radius);
   overflow: hidden;
-  background: var(--bg);
-  box-shadow: 0 8px 32px var(--shadow);
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .video-wrap video {
@@ -408,6 +408,9 @@ section.content h2 {
   width: 100%;
   height: auto;
   vertical-align: middle;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .caption {
@@ -417,27 +420,19 @@ section.content h2 {
   margin: 0.5rem 0 0;
 }
 
-/* Rasterized figure exports (from PDF) */
-.img-figure {
+/* Rasterized figure exports (from PDF) — no frame/edge */
+.img-figure,
+.img-hero {
   display: block;
   width: 100%;
   height: auto;
   max-width: 100%;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: var(--bg);
   vertical-align: middle;
-}
-
-.figure-block .img-figure {
-  box-shadow: 0 2px 12px var(--shadow);
-}
-
-.img-hero {
-  width: 100%;
-  height: auto;
-  border-radius: var(--radius);
-  box-shadow: 0 4px 24px var(--shadow);
+  border: 0;
+  outline: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
 }
 
 /* Key observations */

@@ -22,7 +22,7 @@
     <meta property="twitter:card" content="summary_large_image" />
     <!-- Optional: Adobe Fonts (Graphik). If you use a kit, remove local @font-face in styles.css when the kit loads Graphik. -->
     <!-- <link rel="stylesheet" href="https://use.typekit.net/PROJECT_ID.css" /> -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=2" />
   </head>
   <body>
     <div class="page-scale">
@@ -48,29 +48,12 @@
             decoding="async"
           />
         </div>
-        <nav class="section-nav" aria-label="Page sections">
-          <a href="#overview">Overview</a>
-          <a href="#motivation">Problem</a>
-          <a href="#method">Method</a>
-          <a href="#simulation">Simulation Performance</a>
-          <a href="#real-world">Real-World Performance</a>
-          <a href="#takeaways">Takeaways</a>
-          <a href="#bibtex">BibTeX</a>
-        </nav>
       </div>
     </header>
 
     <main>
       <section class="content" id="overview">
         <div class="wrap">
-          <div class="callout">
-            <strong>TL;DR:</strong> We develop an online adaptation system that includes a
-            <strong>cross-embodiment locomotion policy</strong> and a lightweight <strong>online adaptation module</strong>.
-            The <strong>adaptation module</strong> accurately infers embodiment parameters from short interaction histories
-            (≈0.5&nbsp;s). On a Unitree Go2, in both simulation and the real world, our policy with adaptation matches an
-            oracle policy under severe embodiment uncertainty and changes (e.g., locked leg, added payload), where a base
-            policy without adaptation fails.
-          </div>
           <h2>Abstract</h2>
           <p class="abstract">
             Humans effortlessly adapt their movements as their bodies change due to aging, injury, or the use of tools,
@@ -103,8 +86,8 @@
             <img
               class="img-hero"
               src="figures/background.jpg"
-              width="1600"
-              height="900"
+              width="2237"
+              height="991"
               alt="Problem illustration: diverse embodiments, cross-embodiment policy with uncertainty, and factors such as joint locking, payload, motor failure, and missing parts"
               loading="lazy"
             />
@@ -118,16 +101,14 @@
           <p class="lead">
             A <strong>base policy</strong> is trained across randomized embodiments with access to ground-truth
             embodiment descriptors. We then train an <strong>adaptation module</strong> to infer embodiment parameters
-            from a short interaction history so the <strong>base policy</strong> can condition on them. The module follows
-            two pathways: it predicts either explicit physical parameters (<strong>explicit adaptation</strong>) or latent
-            embodiment representations (<strong>latent adaptation</strong>).
+            from a short interaction history so the <strong>base policy</strong> can condition on them.
           </p>
-          <div class="figure-block">
+          <div class="figure-block figure-w-80">
             <img
               class="img-figure"
-              src="figures/pipeline_diagram.png"
-              width="5867"
-              height="3300"
+              src="figures/pipeline_diagram.jpg"
+              width="4000"
+              height="2043"
               alt="Diagram of the online embodiment adaptation pipeline: base policy, adaptation module, and deployment paths"
               loading="lazy"
               decoding="async"
@@ -141,17 +122,17 @@
           <h2>Simulation Performance</h2>
           <p class="lead">
             Below we plot mean episode return and episode length versus joint limit scaling and trunk mass offset for
-            different policies. The oracle and base policies mark the performance bounds. Policies with adaptation—both
+            different policies. The oracle and no adaptation policies mark the performance bounds. Policies with adaptation—both
             explicit and latent adaptation—match the oracle policy (which receives ground-truth embodiment descriptions)
-            and largely outperform the base policy (which does not).
+            and largely outperform the no adaptation policy (which does not).
           </p>
           <div class="sweep-pair">
             <div class="figure-block">
               <img
                 class="img-figure"
-                src="figures/q2_embodiment_variation_sweep_simulation.png"
-                width="3940"
-                height="820"
+                src="figures/q2_embodiment_variation_sweep_simulation.png?v=2"
+                width="3582"
+                height="750"
                 alt="Embodiment variation sweep in simulation: performance vs joint limit and mass offset"
                 loading="lazy"
                 decoding="async"
@@ -161,9 +142,9 @@
               <div class="sweep-img--half">
                 <img
                   class="img-figure"
-                  src="figures/q2_explicit_implicit_relative.png"
-                  width="1959"
-                  height="820"
+                  src="figures/q2_explicit_implicit_relative.png?v=2"
+                  width="1828"
+                  height="750"
                   alt="Explicit vs latent adaptation across sweeps"
                   loading="lazy"
                   decoding="async"
@@ -188,7 +169,7 @@
             walking with one leg locked or carrying a heavy load; the base policy fails catastrophically in these settings.
           </p>
           <p class="lead follow-text">Below: image streams and video.</p>
-          <div class="figure-block">
+          <div class="figure-block figure-w-60">
             <img
               class="img-figure"
               src="figures/q3_realworld_4_cases_static_gait.png"
@@ -199,7 +180,7 @@
               decoding="async"
             />
           </div>
-          <div class="figure-block">
+          <div class="figure-block figure-w-60">
             <div class="video-wrap">
               <video controls playsinline preload="metadata">
                 <source src="figures/static_comparison.mp4" type="video/mp4" />

@@ -29,17 +29,7 @@ _(Superscripts match the site: affiliation numbers, \* equal contribution, † c
 
 _Image only (banner with UC San Diego, TU Darmstadt, DFKI)._
 
-### Section links (navigation)
-
-Overview · Problem · Method · Simulation Performance · Real-World Performance · Takeaways · BibTeX
-
-_(Overview: TL;DR callout and Abstract. Experiment 2 under Real-World Performance keeps `id="online-change"` for direct links but is not listed in the nav.)_
-
 ---
-
-## TL;DR
-
-**TL;DR:** We develop an online adaptation system that includes a **cross-embodiment locomotion policy** and a lightweight **online adaptation module**. The **adaptation module** accurately infers embodiment parameters from short interaction histories (≈0.5 s). On a Unitree Go2, in both simulation and the real world, our policy with adaptation matches an oracle policy under severe embodiment uncertainty and changes (e.g., locked leg, added payload), where a base policy without adaptation fails.
 
 ## Abstract
 
