@@ -97,28 +97,28 @@ a:hover {
 }
 
 ::selection {
-  background: var(--ucsd-blue);
-  color: var(--ucsd-yellow);
+  background: #b3d7ff;
+  color: inherit;
 }
 
 ::-moz-selection {
-  background: var(--ucsd-blue);
-  color: var(--ucsd-yellow);
+  background: #b3d7ff;
+  color: inherit;
 }
 
-/* Yellow headings: selection inverts to blue text on yellow */
+/* Headings use the same light-blue selection */
 .hero h1::selection,
 section.content h2::selection,
 h3.section-subtitle::selection {
-  background: var(--ucsd-yellow);
-  color: var(--ucsd-blue);
+  background: #b3d7ff;
+  color: inherit;
 }
 
 .hero h1::-moz-selection,
 section.content h2::-moz-selection,
 h3.section-subtitle::-moz-selection {
-  background: var(--ucsd-yellow);
-  color: var(--ucsd-blue);
+  background: #b3d7ff;
+  color: inherit;
 }
 
 .wrap {
