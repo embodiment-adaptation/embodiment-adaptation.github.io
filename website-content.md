@@ -29,6 +29,15 @@ _(Superscripts match the site: affiliation numbers, \* equal contribution.)_
 
 _Image only (banner with UC San Diego, TU Darmstadt, DFKI)._
 
+### Spotlight video
+
+Links (above embed):
+- Paper → https://arxiv.org/abs/2608.01506
+- Video → https://www.youtube.com/watch?v=zaxF0UuHv0Y
+
+YouTube embed: https://www.youtube.com/embed/zaxF0UuHv0Y  
+_(Placed after the title block / logos, before Abstract. iframe must use /embed/, not /watch.)_
+
 ---
 
 ## Abstract

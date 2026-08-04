@@ -413,6 +413,70 @@ section.content h2 {
   box-shadow: none;
 }
 
+/* YouTube / external embeds — 16:9 responsive */
+.video-embed {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #000;
+}
+
+.video-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+#spotlight {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+#spotlight .spotlight-video {
+  margin: 0;
+}
+
+.resource-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem 1rem;
+  margin: 0 0 1.25rem;
+}
+
+.resource-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--ucsd-blue) 5%, #ffffff 95%);
+  color: var(--ucsd-blue);
+  font-family: var(--font-body);
+  font-size: var(--text-ui);
+  font-weight: 400;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: border-color 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+}
+
+.resource-link:hover {
+  border-color: color-mix(in srgb, var(--ucsd-yellow) 55%, var(--border));
+  background: color-mix(in srgb, var(--ucsd-yellow) 14%, #ffffff 86%);
+  color: var(--ucsd-blue);
+  text-decoration: none;
+}
+
+.resource-icon {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+
 .caption {
   font-size: var(--text-small);
   line-height: var(--lh-snug);
