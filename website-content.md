@@ -6,7 +6,7 @@ Edit this text, then sync the same wording into `index.html`. **On the live site
 
 ## Browser tab title
 
-Online Embodiment Adaptation for Quadrupedal Locomotion
+Rapid Embodiment Adaptation for Quadrupedal Locomotion
 
 ---
 
@@ -14,7 +14,7 @@ Online Embodiment Adaptation for Quadrupedal Locomotion
 
 ### Main title
 
-Online Embodiment Adaptation for  
+Rapid Embodiment Adaptation for  
 Quadrupedal Locomotion
 
 ### Authors
@@ -111,8 +111,8 @@ _Video (outdoor / qualitative)._
 
 Button label: **Copy**
 
-    @misc{li2026online,
-      title={Online Embodiment Adaptation for Quadrupedal Locomotion},
+    @misc{li2026rapid,
+      title={Rapid Embodiment Adaptation for Quadrupedal Locomotion},
       author={Li, Dichen and Ai, Bo and Bohlinger, Nico and Peters, Jan and Christensen, Henrik I. and Su, Hao},
       year={2026},
       note={Preprint}

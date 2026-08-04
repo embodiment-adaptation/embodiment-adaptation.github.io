@@ -7,15 +7,15 @@
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
     <link rel="icon" href="figures/robot_icon.png" type="image/png" />
-    <title>Online Embodiment Adaptation for Quadrupedal Locomotion</title>
+    <title>Rapid Embodiment Adaptation for Quadrupedal Locomotion</title>
     <meta
       name="description"
-      content="Online adaptation with a cross-embodiment policy and adaptation module; matches an oracle on Unitree Go2 in sim and the real world."
+      content="Rapid embodiment adaptation with a cross-embodiment policy and adaptation module; matches an oracle on Unitree Go2 in sim and the real world."
     />
-    <meta property="og:title" content="Online Embodiment Adaptation for Quadrupedal Locomotion" />
+    <meta property="og:title" content="Rapid Embodiment Adaptation for Quadrupedal Locomotion" />
     <meta
       property="og:description"
-      content="Online adaptation system: cross-embodiment policy and adaptation module. Fast inference (~0.5s), sim and real Unitree Go2."
+      content="Rapid embodiment adaptation: cross-embodiment policy and adaptation module. Fast inference (~0.5s), sim and real Unitree Go2."
     />
     <meta property="og:type" content="website" />
     <!-- When publishing, set og:url and og:image to absolute URLs, e.g. https://YOUR_USER.github.io/YOUR_REPO/ -->
@@ -28,7 +28,7 @@
     <div class="page-scale">
     <header class="hero">
       <div class="wrap">
-        <h1>Online Embodiment Adaptation for<br />Quadrupedal Locomotion</h1>
+        <h1>Rapid Embodiment Adaptation for<br />Quadrupedal Locomotion</h1>
         <p class="authors">
           <a href="https://dichen-li.github.io/" target="_blank" rel="noopener noreferrer">Dichen Li</a><sup>1*</sup>,
           <a href="https://albertboai.com/" target="_blank" rel="noopener noreferrer">Bo Ai</a><sup>1*</sup>,
@@ -56,19 +56,20 @@
         <div class="wrap">
           <h2>Abstract</h2>
           <p class="abstract">
-            Humans effortlessly adapt their movements as their bodies change due to aging, injury, or the use of tools,
-            yet most learning-based robot controllers struggle when their hardware properties change. While recent work
-            trains cross-embodiment policies through large-scale embodiment randomization, these methods typically assume
-            the embodiment at deployment is known. In this work, we propose an online embodiment adaptation framework
-            for quadrupedal locomotion that explicitly infers embodiment parameters from interaction histories and
-            conditions control on the inferred embodiment. Our approach combines a generalist embodiment-aware policy
-            trained under extensive randomization with a lightweight adaptation module that identifies embodiment
-            properties from online interactions within half a second. In simulation, our approach accurately estimates
-            joint limit and payload mass changes, and outperforms an implicit end-to-end baseline. On the real-world
-            Unitree Go2 robot, our system enables stable locomotion under severe embodiment uncertainty, including a fully
-            locked leg or payload addition of 5&nbsp;kg, where policies without adaptation fail. These results demonstrate
-            that explicit online embodiment adaptation can bridge the gap between cross-embodiment training and robust
-            real-world deployment under embodiment uncertainty.
+            Humans readily adapt their movements as their bodies change through aging, injury, or load carrying, 
+            but learning-based robot policies often break when hardware properties shift. We introduce an online 
+            embodiment adaptation framework for quadrupedal locomotion that infers embodiment parameters from short 
+            interaction histories and conditions control on the inferred hardware state. Our method pairs a generalist 
+            policy trained under embodiment randomization with a lightweight adaptation module that identifies physical 
+            changes within half a second. We evaluate two representative forms of embodiment variation: joint-range 
+            constraints and trunk-mass changes, corresponding to joint-level kinematic degradation and body-level 
+            dynamic variation. In simulation, the module accurately estimates these changes and enables closed-loop 
+            control that substantially outperforms policies conditioned directly on interaction history. On a real 
+            Unitree Go2 robot, our system maintains stable locomotion under severe instances of the evaluated changes, 
+            including a fully locked leg and a 5 kg payload, where non-adaptive methods fail. These results demonstrate 
+            the practicality of explicit online embodiment identification for rapid adaptation to joint-limit and 
+            payload-mass changes, and provide a step toward handling broader forms of uncertain, degraded, or changing 
+            robot hardware.
           </p>
         </div>
       </section>
@@ -109,7 +110,7 @@
               src="figures/pipeline_diagram.jpg"
               width="4000"
               height="2043"
-              alt="Diagram of the online embodiment adaptation pipeline: base policy, adaptation module, and deployment paths"
+              alt="Diagram of the rapid embodiment adaptation pipeline: base policy, adaptation module, and deployment paths"
               loading="lazy"
               decoding="async"
             />
@@ -244,8 +245,8 @@
               Copy
             </button>
           </div>
-          <pre class="bib" id="bibtex-content">@misc{li2026online,
-  title={Online Embodiment Adaptation for Quadrupedal Locomotion},
+          <pre class="bib" id="bibtex-content">@misc{li2026rapid,
+  title={Rapid Embodiment Adaptation for Quadrupedal Locomotion},
   author={Li, Dichen and Ai, Bo and Bohlinger, Nico and Peters, Jan and Christensen, Henrik I. and Su, Hao},
   year={2026},
   note={Preprint}
