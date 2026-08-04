@@ -77,6 +77,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Keep bold the same optical size as regular text (esp. under mobile page zoom) */
+strong,
+b {
+  font-family: inherit;
+  font-size: 1em;
+  font-weight: 700;
+  line-height: inherit;
+  letter-spacing: inherit;
+}
+
 img,
 video,
 svg {
@@ -131,7 +141,7 @@ h3.section-subtitle::-moz-selection {
 
 /* Hero */
 .hero {
-  padding: 3rem 0 2.5rem;
+  padding: 3rem 0 1.25rem;
   text-align: center;
   background: var(--bg);
   border-bottom: 1px solid var(--border);
@@ -170,7 +180,7 @@ h3.section-subtitle::-moz-selection {
 }
 
 .institution-logos {
-  margin: 0 auto 1.15rem;
+  margin: 0 auto;
   max-width: min(100%, 720px);
 }
 
@@ -247,7 +257,9 @@ section.content h2 {
 .callout {
   margin: 0 0 1.25rem;
   padding: 1rem 1.15rem;
+  font-family: var(--font-body);
   font-size: var(--text-body);
+  font-weight: 400;
   line-height: var(--lh-prose);
   background: var(--surface);
   border-left: 4px solid var(--ucsd-yellow);
@@ -264,10 +276,11 @@ section.content h2 {
 }
 
 .abstract {
-  width: 60%;
-  margin: 0 auto;
+  width: 80%;
+  margin: auto;
   text-align: start;
   hyphens: auto;
+  font-size: var(--text-body);
   line-height: var(--lh-prose);
 }
 
@@ -431,7 +444,7 @@ section.content h2 {
 }
 
 #spotlight {
-  padding-top: 1.5rem;
+  padding-top: 1.25rem;
   padding-bottom: 1.5rem;
 }
 
@@ -453,7 +466,7 @@ section.content h2 {
   gap: 0.45rem;
   padding: 0.45rem 0.9rem;
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-radius: 999px;
   background: color-mix(in srgb, var(--ucsd-blue) 5%, #ffffff 95%);
   color: var(--ucsd-blue);
   font-family: var(--font-body);
@@ -527,9 +540,9 @@ section.content .bib-header h2 {
 
 .copy-bib {
   font-family: var(--font-body);
-  font-size: var(--text-ui);
-  line-height: 1.25;
-  font-weight: 600;
+  font-size: var(--text-body);
+  line-height: var(--lh-prose);
+  font-weight: 400;
   padding: 0.4rem 0.85rem;
   border: 1px solid var(--border);
   border-radius: 999px;
@@ -552,7 +565,7 @@ section.content .bib-header h2 {
 pre.bib {
   font-family: ui-monospace, "SF Mono", Menlo, monospace;
   font-size: var(--text-body);
-  line-height: 1.5;
+  line-height: var(--lh-prose);
   padding: 1rem 1.1rem;
   background: color-mix(in srgb, var(--ucsd-blue) 6%, #ffffff 94%);
   color: var(--text);
